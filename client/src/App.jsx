@@ -21,7 +21,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500">
-        <p>GHL Custom Developer Portal • Designed for GoHighLevel Custom Menu iFrame Integration</p>
+        <p>GHL Custom Developer Portal</p>
       </footer>
     </div>
   );
