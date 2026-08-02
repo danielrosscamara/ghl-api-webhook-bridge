@@ -1,0 +1,52 @@
+/**
+ * GoHighLevel Custom Funnel & iFrame Glassmorphism Stylesheet
+ * -------------------------------------------------------------------
+ * INSTRUCTIONS FOR GHL FUNNEL BUILDER:
+ * Paste into GHL Funnel -> Page Settings -> Custom CSS.
+ * Uses prefixed utility rules to prevent conflicts with GHL's base CSS engine.
+ */
+
+/* Custom Scoped Glassmorphism Container */
+.ghl-custom-card {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  color: #f8fafc;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ghl-custom-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* Custom Gradient Button Override for GHL Forms */
+.ghl-btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.ghl-btn-primary:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+/* GHL Form Field Focus Highlight */
+.ghl-custom-card input:focus,
+.ghl-custom-card select:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 1px;
+}
