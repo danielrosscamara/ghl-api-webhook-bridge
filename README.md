@@ -54,20 +54,24 @@ ghl-api-webhook-bridge/
 ## ⚡ Core Features & Technical Highlights
 
 ### 1. GHL REST API v2 Proxying (`server/routes/ghlApiRouter.js`)
+
 - Protects client access tokens by proxying API calls through Node.js.
 - Exposes authenticated endpoints: `GET /api/ghl/contacts`, `POST /api/ghl/contacts`, `GET /api/ghl/opportunities`.
 
 ### 2. Live Webhook Engine (`server/routes/webhookRouter.js`)
+
 - Captures incoming POST triggers sent from HighLevel Workflows.
 - Buffer keeps the last 50 webhook events for real-time inspection in the React dashboard.
 - Includes a built-in **Simulator Endpoint** (`POST /api/ghl/simulate-trigger`) for instant testing without paid GHL access.
 
 ### 3. GHL Custom Funnel Scripts (`scripts/`)
+
 - **`ghl-utm-injector.js`**: Automatically parses URL search parameters (`?utm_source=facebook&utm_campaign=summer`) and injects values into hidden GHL form fields for ad attribution.
 - **`ghl-funnel-calculator.js`**: Listens to custom funnel inputs (quantities, service tiers), computes real-time pricing, and writes values into GHL custom fields prior to submission.
 - **`ghl-custom-styles.css`**: Sleek glassmorphism CSS card overrides for GHL funnel popups and embeds.
 
 ### 4. Custom Menu React App (`client/`)
+
 - **Contact Explorer**: Search contacts by name/email and create new GHL contacts dynamically.
 - **Opportunity Pipeline Tracker**: Real-time visual tracking of deal stages and total pipeline monetary value.
 - **Live Webhook Viewer**: Auto-refreshing log stream with interactive trigger simulator buttons.
@@ -77,25 +81,31 @@ ghl-api-webhook-bridge/
 ## 🚀 Quick Start Guide
 
 ### Prerequisites
+
 - Node.js (v18+)
 - npm or yarn
 
 ### 1. Start the Backend Middleware Server
+
 ```bash
 cd server
 npm install
 npm run dev
 ```
-*Server starts on `http://localhost:5000`*
+
+_Server starts on `http://localhost:5000`_
 
 ### 2. Start the React Client Application
+
 Open a new terminal window:
+
 ```bash
 cd client
 npm install
 npm run dev
 ```
-*App starts on `http://localhost:5173`*
+
+_App starts on `http://localhost:5173`_
 
 ---
 
@@ -113,8 +123,3 @@ To embed this React application inside a GoHighLevel sub-account:
    - **Display Target**: `Inside iframe`
    - **Show in Locations**: Select target sub-accounts
 5. Save the link. Your custom React application now renders directly inside GHL!
-
----
-
-## 👤 Author
-Developed by **Daniel Ross Camara** — GoHighLevel Developer Assistant & Full-Stack Engineer.
